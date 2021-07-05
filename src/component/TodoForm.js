@@ -6,6 +6,7 @@ const TodoForm = ({ addTodo }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
+
     if (!value) {
       setIsEmpty(true);
       return;
@@ -27,12 +28,12 @@ const TodoForm = ({ addTodo }) => {
           className='input'
           value={value}
           onChange={handleValChange}
-          placeholder='Input task'
+          placeholder='Task name'
           autoFocus
         />
         <button type='submit'>Add</button>
       </div>
-      {isEmpty && <div className='input-error'>Please enter a todo name.</div>}
+      {isEmpty && <div className='input-error'>Please input a task name.</div>}
     </form>
   );
 };
